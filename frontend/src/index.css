@@ -1,0 +1,104 @@
+.black-text-lg {
+    color: black;
+    font-size: 3rem;
+}
+
+.black-text-md {
+    color: black;
+    font-size: 2rem;
+}
+
+.carousel-caption-p {
+    padding-bottom: 600px;
+}
+
+.my-container {
+    padding: 1rem;
+}
+
+.buttons-mb {
+    margin-bottom: 10px;
+}
+
+
+.link-color {
+    color: black;
+    text-decoration: none;
+}
+
+.link-color:hover {
+    color: #5cb85c;
+    text-decoration: none;
+}
+
+.link-color-carousel {
+    color: black;
+    text-decoration: none;
+}
+
+.link-color-carousel:hover {
+    color: orangered;
+    text-decoration: none;
+}
+
+.loading {
+    display: block !important;
+}
+.success {
+    color: #20a020;
+}
+.danger {
+    color: #a02020;
+}
+.alert {
+    padding: 1rem;
+    border: 0.1rem solid transparent;
+    border-radius: 0.5rem;
+}
+.alert-info {
+    color: #2020a0;
+    background-color: #e0e0ff;
+}
+.alert-danger {
+    color: #a02020;
+    background-color: #ffe0e0;
+}
+.alert-success {
+    color: #20a020;
+    background-color: #eeffe0;
+}
+
+
+
+@media (max-width: 1028px) {
+
+    .carousel-caption-p {
+        padding-bottom: 0;
+    }
+
+    .black-text-lg {
+        color: black;
+        font-size: 1.2rem;
+    }
+
+    .black-text-md {
+        color: black;
+        font-size: 1rem;
+    }
+
+    .mb-btn-m {
+        margin: 10px 0 10px 0;
+        font-size: 2rem;
+    }
+    .upper-caption{
+        position: absolute;
+        top: 30px;
+    }
+
+}
+
+
+
+
+
+
