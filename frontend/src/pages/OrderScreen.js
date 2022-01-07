@@ -17,7 +17,7 @@ export default function Order(props) {
     const cart = useSelector((state) => state.cart);
     const {cartItems} = cart;
     const orderId = props.match.params.id;
-    const [sdkReady, setSdkReady] = useState(false);
+    const [sdkReady, setSdkReady] = useState(true);
     const orderDetails = useSelector((state) => state.orderDetails);
     const {order, loading, error} = orderDetails;
     const orderPay = useSelector((state) => state.orderPay);
@@ -34,7 +34,7 @@ export default function Order(props) {
             const { data } = await axios.get('/api/config/paypal');
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `https://www.paypal.com/sdk/js?client-id=${data}&currency=PLN`;
+            script.src = `https://www.paypal.com/sdk/js?client-id={ data }&currency=USD`;
             script.async = true;
             script.onload = () => {
                 setSdkReady(true);
@@ -148,7 +148,7 @@ export default function Order(props) {
                                                     </Link>
                                                 </Col>
                                                 <Col lg="4">
-                                                    <p className="mt-4" style={{marginRight: "200px",whiteSpace: "nowrap", overflow: "hidden",textOverflow: "ellipsis",width: "13ch"}}>{(item.qty * item.price).toFixed(2)} zł</p>
+                                                    <p className="mt-4" style={{marginRight: "200px",whiteSpace: "nowrap", overflow: "hidden",textOverflow: "ellipsis",width: "13ch"}}>{(item.qty * item.price).toFixed(2)} USD</p>
                                                 </Col>
                                             </Row>
                                         ))
@@ -168,7 +168,7 @@ export default function Order(props) {
                                 <h4 className="text-center">Koszyk:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{order.shippingAddress.cartPrice.toFixed(2)} zł</h3>
+                                <h3 className="text-center">{order.shippingAddress.cartPrice.toFixed(2)} USD</h3>
                             </Col>
                         </Row>
                         <Row className="mt-4">
@@ -176,7 +176,7 @@ export default function Order(props) {
                                 <h4 className="text-center">Dostawa:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{order.shippingAddress.deliveryMethod === 'Kurier' ? order.shippingAddress.deliveryPrice.toFixed(2) : '0.00'} zł</h3>
+                                <h3 className="text-center">{order.shippingAddress.deliveryMethod === 'Kurier' ? order.shippingAddress.deliveryPrice.toFixed(2) : '0.00'} USD</h3>
                             </Col>
                         </Row>
                         <Row className="mt-4">
@@ -184,10 +184,10 @@ export default function Order(props) {
                                 <h4 className="text-center">Razem:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{order.shippingAddress.deliveryMethod === 'Kurier' ? (order.shippingAddress.cartPrice + order.shippingAddress.deliveryPrice).toFixed(2): order.shippingAddress.cartPrice.toFixed(2) } zł</h3>
+                                <h3 className="text-center">{order.shippingAddress.deliveryMethod === 'Kurier' ? (order.shippingAddress.cartPrice + order.shippingAddress.deliveryPrice).toFixed(2): order.shippingAddress.cartPrice.toFixed(2) } USD</h3>
                             </Col>
                         </Row>
-                        {!userInfo.isAdmin && !order.isPaid && order.shippingAddress.paymentMethod === 'PayPal' && (
+                        {!order.isPaid && order.shippingAddress.paymentMethod === 'PayPal' && (
                             <div>
                                 {!sdkReady ? (
                                     <LoadingBox/>
@@ -197,7 +197,7 @@ export default function Order(props) {
                                             <ErrorBox variant="danger">{errorPay}</ErrorBox>
                                         )}
                                         {
-                                            <PayPalButton amount={order.shippingAddress.totalPrice} onSuccess={successPaymentHandler} currency="PLN"/>
+                                            <PayPalButton amount={order.shippingAddress.totalPrice} onSuccess={successPaymentHandler} currency='USD'/>
                                         }
                                     </div>
                                 )}

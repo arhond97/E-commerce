@@ -100,7 +100,7 @@ export default function ProductPage(props) {
                                                   )}
 
                                                   <div className="col mt-4">
-                                                      <h1 className="text-lg">{product.price} zł</h1>
+                                                      <h1 className="text-lg">{product.price} USD</h1>
                                                   </div>
                                                   {
                                                       product.countInStock > 0 ? (
@@ -132,7 +132,7 @@ export default function ProductPage(props) {
                                   ) : (
                                       <>
                                           <div className="mt-4">
-                                              <h1 className="text-lg">{product.price} zł</h1>
+                                              <h1 className="text-lg">{product.price} USD</h1>
                                           </div>
                                           <Button
                                               variant="outline-dark"

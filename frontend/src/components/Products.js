@@ -120,7 +120,7 @@ export default function ProductsTab(props) {
                                     <tr key={product._id}>
                                         <td>{product._id}</td>
                                         <td>{product.name}</td>
-                                        <td>{product.price} zł</td>
+                                        <td>{product.price} USD</td>
                                         <td>{product.category}</td>
                                         <td>
                                             <Button size="sm" onClick={() => editHandler(product)}>
