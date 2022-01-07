@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevelopingProgress/Serwis_E-commerce_Projekt.git"
+    "url": "git+https://github.com/arhond/E-commerce.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DevelopingProgress/Serwis_E-commerce_Projekt/issues"
+    "url": "https://github.com/arhond/E-commerce/issues"
   },
-  "homepage": "https://github.com/DevelopingProgress/Serwis_E-commerce_Projekt#readme",
+  "homepage": "https://github.com/arhond/E-commerce#readme",
   "dependencies": {
     "@agney/react-loading": "^0.1.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
