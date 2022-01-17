@@ -75,7 +75,7 @@ export default function ShippingPage(props) {
                                     </div>
                                     <div className="ml-3">
                                         <input  type="radio" id="courier" value="Kurier" name="deliveryMethod" required defaultChecked  onChange={event => setDeliveryMethod(event.target.value)}/>
-                                        <label htmlFor="courier">&nbsp;&nbsp;Kurier ({deliveryPrice === 0 ? (<><span style={{ textDecorationLine: 'line-through' }}>15.00</span>) {deliveryPrice.toFixed(2)} USD</>): <>{deliveryPrice.toFixed(2)} USD)</>}</label>
+                                        <label htmlFor="courier">&nbsp;&nbsp;Kurier ({deliveryPrice === 0 ? (<><span style={{ textDecorationLine: 'line-through' }}>15.00</span>) {deliveryPrice.toFixed(2)} zł</>): <>{deliveryPrice.toFixed(2)} USD)</>}</label>
                                     </div>
                                     <div className="ml-3">
                                         <Form.Check label="Odbiór Osobisty" type="radio" id="saloon" value="Odbiór Osobisty" name="deliveryMethod" required onChange={event => setDeliveryMethod(event.target.value)}/>
@@ -172,13 +172,13 @@ export default function ShippingPage(props) {
                     <Col lg="4" className="mt-5">
                         <h2 className="text-center">Podsumowanie</h2>
                         <div className="bg-light p-3 mr-2">
-                            <h6 className="text-center text-success">Przy zamówieniach powyżej 1000 USD dostawa GRATIS!</h6>
+                            <h6 className="text-center text-success">Przy zamówieniach powyżej 1000 zł dostawa GRATIS!</h6>
                             <Row className="mt-4">
                                 <Col lg="5">
                                     <h4 className="text-center">Koszyk:</h4>
                                 </Col>
                                 <Col lg="7">
-                                    <h3 className="text-center">{cartPrice.toFixed(2)} USD</h3>
+                                    <h3 className="text-center">{cartPrice.toFixed(2)} zł</h3>
                                 </Col>
                             </Row>
                             <Row className="mt-4">
@@ -186,7 +186,7 @@ export default function ShippingPage(props) {
                                     <h4 className="text-center">Dostawa:</h4>
                                 </Col>
                                 <Col lg="7">
-                                    <h3 className="text-center">{deliveryMethod === 'Kurier' ? deliveryPrice.toFixed(2) : '0.00'} USD</h3>
+                                    <h3 className="text-center">{deliveryMethod === 'Kurier' ? deliveryPrice.toFixed(2) : '0.00'} zł</h3>
                                 </Col>
                             </Row>
                             <Row className="mt-4">
@@ -194,7 +194,7 @@ export default function ShippingPage(props) {
                                     <h4 className="text-center">Razem:</h4>
                                 </Col>
                                 <Col lg="7">
-                                    <h3 className="text-center">{deliveryMethod === 'Kurier' ? (cartPrice + deliveryPrice).toFixed(2): cartPrice.toFixed(2) } USD</h3>
+                                    <h3 className="text-center">{deliveryMethod === 'Kurier' ? (cartPrice + deliveryPrice).toFixed(2): cartPrice.toFixed(2) } zł</h3>
                                 </Col>
                             </Row>
                             <Row>

@@ -80,7 +80,7 @@ export default function OrdersTab(props) {
                                 <td>{order._id}</td>
                                 <td><Mailto email={order.user.email} subject={`Zamówienie nr ${order._id}`} body="Dzień Dobry...Pozdrawiamy">{order.user.email}</Mailto></td>
                                 <td>{Moment(order.createdAt).format('YYYY/MM/DD HH:MM')}</td>
-                                <td>{order.shippingAddress.totalPrice.toFixed(2)} USD</td>
+                                <td>{order.shippingAddress.totalPrice.toFixed(2)} zł</td>
                                 <td>{order.isPaid ? order.paidAt.substring(0, 10) : (order.shippingAddress.paymentMethod === 'Gotówka przy odbiorze' ? 'Przy odbiorze':'Nieopłacone')}</td>
                                 <td>{order.isDelivered ? order.deliveredAt.substring(0, 10) : (order.shippingAddress.deliveryMethod === 'Odbiór Osobisty' ? 'Odbiór Osobisty': 'Niedostarczone')}</td>
                                 <td>

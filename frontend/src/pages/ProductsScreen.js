@@ -100,7 +100,7 @@ export default function Products(props) {
                                                     <Card.Title>{product.name}</Card.Title>
                                                 </Link>
                                                 <Card.Text>{product.thumbnail}</Card.Text>
-                                                <h3 style={{textAlign: 'right'}}>{product.price} USD</h3>
+                                                <h3 style={{textAlign: 'right'}}>{product.price} zł</h3>
                                                 {
                                                     userInfo && !userInfo.isAdmin ? (
 

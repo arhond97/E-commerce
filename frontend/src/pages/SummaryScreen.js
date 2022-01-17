@@ -104,7 +104,7 @@ export default function Summary(props) {
                                                     </Link>
                                                 </Col>
                                                 <Col lg="4">
-                                                    <p className="mt-4" style={{marginRight: "200px",whiteSpace: "nowrap", overflow: "hidden",textOverflow: "ellipsis",width: "13ch"}}>{(item.qty * item.price).toFixed(2)} USD</p>
+                                                    <p className="mt-4" style={{marginRight: "200px",whiteSpace: "nowrap", overflow: "hidden",textOverflow: "ellipsis",width: "13ch"}}>{(item.qty * item.price).toFixed(2)} zł</p>
                                                 </Col>
                                             </Row>
                                         ))
@@ -124,7 +124,7 @@ export default function Summary(props) {
                                 <h4 className="text-center">Koszyk:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{cart.shippingAddress.cartPrice.toFixed(2)} USD</h3>
+                                <h3 className="text-center">{cart.shippingAddress.cartPrice.toFixed(2)} zł</h3>
                             </Col>
                         </Row>
                         <Row className="mt-4">
@@ -132,7 +132,7 @@ export default function Summary(props) {
                                 <h4 className="text-center">Dostawa:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{cart.shippingAddress.deliveryMethod === 'Kurier' ? cart.shippingAddress.deliveryPrice.toFixed(2) : '0.00'} USD</h3>
+                                <h3 className="text-center">{cart.shippingAddress.deliveryMethod === 'Kurier' ? cart.shippingAddress.deliveryPrice.toFixed(2) : '0.00'} zł</h3>
                             </Col>
                         </Row>
                         <Row className="mt-4">
@@ -140,7 +140,7 @@ export default function Summary(props) {
                                 <h4 className="text-center">Razem:</h4>
                             </Col>
                             <Col lg="7">
-                                <h3 className="text-center">{cart.shippingAddress.deliveryMethod === 'Kurier' ? (cart.shippingAddress.cartPrice + cart.shippingAddress.deliveryPrice).toFixed(2): cart.shippingAddress.cartPrice.toFixed(2) } USD</h3>
+                                <h3 className="text-center">{cart.shippingAddress.deliveryMethod === 'Kurier' ? (cart.shippingAddress.cartPrice + cart.shippingAddress.deliveryPrice).toFixed(2): cart.shippingAddress.cartPrice.toFixed(2) } zł</h3>
                             </Col>
                         </Row>
                         <Row>

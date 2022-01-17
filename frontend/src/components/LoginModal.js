@@ -65,8 +65,8 @@ export function LoginModal(props) {
                                             </Form.Control>
                                         </Col>
                                         <Col lg="2" className="mx-3 pt-3">
-                                            <h5>{(item.price * item.qty).toFixed(2)} USD</h5>
-                                            <span>{item.price} USD za sztukę</span>
+                                            <h5>{(item.price * item.qty).toFixed(2)} zł</h5>
+                                            <span>{item.price} zł za sztukę</span>
                                         </Col>
                                         <Col lg="2" className="mx-3 pt-3">
                                             <Button variant="outline-danger" onClick={() => dispatch(removeFromCart(item.product))}>Usuń</Button>
@@ -86,7 +86,7 @@ export function LoginModal(props) {
                                             <h4 className="text-center">Razem:</h4>
                                         </Col>
                                         <Col lg="7">
-                                            <h3 className="text-left">{cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(2)} USD</h3>
+                                            <h3 className="text-left">{cartItems.reduce((a, c) => a + c.price * c.qty, 0).toFixed(2)} zł</h3>
                                         </Col>
                                     </Row>
                                     <Row>
