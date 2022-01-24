@@ -34,7 +34,7 @@ export default function Order(props) {
             const { data } = await axios.get('/api/config/paypal');
             const script = document.createElement('script');
             script.type = 'text/javascript';
-            script.src = `https://www.paypal.com/sdk/js?client-id={ data }&currency=PLN`;
+            script.src = `https://www.paypal.com/sdk/js?client-id={ data }&currency=USD`;
             script.async = true;
             script.onload = () => {
                 setSdkReady(true);
@@ -197,7 +197,7 @@ export default function Order(props) {
                                             <ErrorBox variant="danger">{errorPay}</ErrorBox>
                                         )}
                                         {
-                                            <PayPalButton amount={order.shippingAddress.totalPrice} onSuccess={successPaymentHandler} currency='PLN'/>
+                                            <PayPalButton amount={order.shippingAddress.totalPrice} onSuccess={successPaymentHandler} currency='USD'/>
                                         }
                                     </div>
                                 )}

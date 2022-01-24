@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal" created-in="IU-213.6461.79">
+    <data-source name="SerwisE-CommerceProjekt@ecommerce.lga1d.mongodb.net" uuid="eee4fe6b-e880-4bab-995d-cd11d9e7c908">
+      <database-info product="Mongo DB" version="4.4.10" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.13" dbms="MONGO" exact-version="4.4.10" exact-driver-version="1.13" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="SerwisE-CommerceProjekt" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+    <data-source name="@localhost" uuid="26e595a3-1bbc-4d38-b243-517dba65976e">
+      <database-info product="Mongo DB" version="" jdbc-version="1.2" driver-name="" driver-version="" dbms="UNKNOWN" exact-version="0" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <secret-storage>forget</secret-storage>
+      <schema-mapping />
+    </data-source>
+    <data-source name="E-Commerce@cluster0.sejbz.mongodb.net" uuid="0c0fef21-2187-46fc-b239-47e47ce2c310">
+      <database-info product="Mongo DB" version="4.4.10" jdbc-version="4.2" driver-name="MongoDB JDBC Driver" driver-version="1.13" dbms="MONGO" exact-version="4.4.10" exact-driver-version="1.13" />
+      <case-sensitivity plain-identifiers="mixed" quoted-identifiers="mixed" />
+      <user-name>arhond</user-name>
+      <schema-mapping>
+        <introspection-scope>
+          <node kind="schema">
+            <name qname="@" />
+            <name qname="E-commerce" />
+          </node>
+        </introspection-scope>
+      </schema-mapping>
+    </data-source>
+  </component>
+</project>

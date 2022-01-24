@@ -8,7 +8,7 @@ export default function MyCarousel() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../../../images/pexels-karolina-grabowska-5632371.jpg"
+                    src="../../../images/c1.jpg"
                     alt="First slide"
                 />
                 <Carousel.Caption className="upper-caption">
@@ -22,8 +22,8 @@ export default function MyCarousel() {
             <Carousel.Item>
                 <img
                     className="d-block w-100"
-                    src="../../../images/pexels-karolina-grabowska-5632402.jpg"
-                    alt="Third slide"
+                    src="../../../images/pexels-karolina-grabowska-5632371.jpg"
+                    alt="Second slide"
                 />
 
                 <Carousel.Caption className="upper-caption">

@@ -75,7 +75,7 @@ export default function ShippingPage(props) {
                                     </div>
                                     <div className="ml-3">
                                         <input  type="radio" id="courier" value="Kurier" name="deliveryMethod" required defaultChecked  onChange={event => setDeliveryMethod(event.target.value)}/>
-                                        <label htmlFor="courier">&nbsp;&nbsp;Kurier ({deliveryPrice === 0 ? (<><span style={{ textDecorationLine: 'line-through' }}>15.00</span>) {deliveryPrice.toFixed(2)} zł</>): <>{deliveryPrice.toFixed(2)} USD)</>}</label>
+                                        <label htmlFor="courier">&nbsp;&nbsp;Kurier ({deliveryPrice === 0 ? (<><span style={{ textDecorationLine: 'line-through' }}>15.00</span>) {deliveryPrice.toFixed(2)} zł</>): <>{deliveryPrice.toFixed(2)} PLN)</>}</label>
                                     </div>
                                     <div className="ml-3">
                                         <Form.Check label="Odbiór Osobisty" type="radio" id="saloon" value="Odbiór Osobisty" name="deliveryMethod" required onChange={event => setDeliveryMethod(event.target.value)}/>
