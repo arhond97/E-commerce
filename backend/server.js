@@ -13,7 +13,7 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://arhond:b282xcg5@cluster0.sejbz.mongodb.net/E-commerce?retryWrites=true&w=majority',
+mongoose.connect(process.env.MONGODB_URL || 'mongodb+srv://',
     {
     useNewUrlParser: true,
     useUnifiedTopology: true,
